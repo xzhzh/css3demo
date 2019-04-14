@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script src="js/jquery-1.11.1.js"></script>
+        <!-- 函数：把重复的代码封装起来 
+		函数定义：function 函数名{
+			经常用到的代码
+		}
+		函数使用函数名();
+        -->
+        <script>
+        	$(function(){
+        		var timer;
+	        	function data(){
+	        		alert('今天天气和那好');
+	        		alert('今天天气星期二');
+	        	}
+	        	var num=0;
+	        	function time(){
+	        		timer=setInterval(function(){
+	        		num=num+1;
+	        		alert(num);
+	        	},1000)
+	        	}
+	        	$('button').click(function(event) {
+	 
+	        		timer=setInterval(function(){
+	        			num=num+6;
+	        			$('div').css('left', num+'px');
+	        		},100)
+	        	});
+
+
+        	})
+        </script>
+        <style>
+        	div{width: 50px;height: 50px;background: pink;position: relative;}
+        </style>
+    </head>
+    <body>
+    <button>按钮</button>
+    <div></div>
+    </body>
+</html>
